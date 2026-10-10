@@ -193,3 +193,16 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+# Local model files and editor backups
+/models/
+/checkpoints/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.save
+*.swp
+
+# Local credentials
+.env.*
+!.env.example
