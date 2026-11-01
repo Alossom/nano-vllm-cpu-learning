@@ -1,0 +1,6907 @@
+{
+  "metadata": {
+    "stage": "custom_confirm",
+    "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+    "torch": "2.14.0+cpu",
+    "transformers": "5.16.1",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "threads": 4,
+    "interop": 1,
+    "cuda": false,
+    "commit": "ecddefc5c4a1e36ffc85d65c5ce040d84340cc4d",
+    "upstream_base": "bb823b3e06983d71485a8e1f23715ebd87d98ef8",
+    "git_status": "?? generate_cpu_learning.py\n",
+    "dtype": "float32",
+    "repetitions": 6,
+    "warmups_per_case": 1,
+    "output_tokens": 16,
+    "prompt_kind": "deterministic synthetic in-vocabulary IDs, not quality evaluation",
+    "timing_exclusions": "model loading, tokenization, warmup, prefix population; engine creation except sequential inner engines",
+    "model_config": {
+      "architectures": [
+        "Qwen3ForCausalLM"
+      ],
+      "attention_bias": false,
+      "attention_dropout": 0.0,
+      "bos_token_id": 151643,
+      "eos_token_id": 151645,
+      "head_dim": 128,
+      "hidden_act": "silu",
+      "hidden_size": 1024,
+      "initializer_range": 0.02,
+      "intermediate_size": 3072,
+      "max_position_embeddings": 40960,
+      "max_window_layers": 28,
+      "model_type": "qwen3",
+      "num_attention_heads": 16,
+      "num_hidden_layers": 28,
+      "num_key_value_heads": 8,
+      "rms_norm_eps": 1e-06,
+      "rope_scaling": null,
+      "rope_theta": 1000000,
+      "sliding_window": null,
+      "tie_word_embeddings": true,
+      "torch_dtype": "bfloat16",
+      "transformers_version": "4.51.0",
+      "use_cache": true,
+      "use_sliding_window": false,
+      "vocab_size": 151936
+    },
+    "load_seconds": 4.283215238000139,
+    "parameters": 596049920,
+    "kv_cache_bytes": 469762048,
+    "load_report": "LoadReport(num_tensors=310, num_parameters=596049920)",
+    "confirmation": "alternating execution order; three pairs original-first, three pairs current-first"
+  },
+  "records": [
+    {
+      "elapsed_s": 2.5176712370000587,
+      "output_tps": 25.420316624127405,
+      "ttft_s": 0.8452641394999887,
+      "requests": {
+        "0": {
+          "ttft_s": 0.8452699209999537,
+          "latency_s": 2.5176375900000494,
+          "mean_itl_s": 0.11149117793333971,
+          "max_itl_s": 0.11679464600001666,
+          "tokens": [
+            23391,
+            315,
+            279,
+            26279,
+            315,
+            279,
+            10981,
+            6291,
+            374,
+            4362,
+            13,
+            576,
+            10981,
+            6291,
+            374,
+            311
+          ]
+        },
+        "1": {
+          "ttft_s": 0.8452659600000061,
+          "latency_s": 2.517633629000102,
+          "mean_itl_s": 0.11149117793333971,
+          "max_itl_s": 0.11679464600001666,
+          "tokens": [
+            198,
+            522,
+            1851,
+            397,
+            522,
+            1726,
+            397,
+            522,
+            611,
+            397,
+            522,
+            611,
+            397,
+            522,
+            611,
+            397
+          ]
+        },
+        "2": {
+          "ttft_s": 0.8452630980000322,
+          "latency_s": 2.517630767000128,
+          "mean_itl_s": 0.11149117793333971,
+          "max_itl_s": 0.11679464600001666,
+          "tokens": [
+            271,
+            1986,
+            374,
+            264,
+            3491,
+            448,
+            279,
+            2038,
+            13,
+            1084,
+            4977,
+            1075,
+            279,
+            2038,
+            374,
+            4460
+          ]
+        },
+        "3": {
+          "ttft_s": 0.8452575789999628,
+          "latency_s": 2.5176252480000585,
+          "mean_itl_s": 0.11149117793333971,
+          "max_itl_s": 0.11679464600001666,
+          "tokens": [
+            271,
+            100001,
+            46100,
+            104544,
+            100902,
+            102988,
+            110569,
+            102064,
+            57191,
+            105149,
+            104799,
+            46100,
+            115076,
+            3837,
+            77288,
+            104544
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 3.8166999956956715e-05,
+          "end_s": 0.8452949259999514,
+          "events": [
+            {
+              "name": "0",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 23391,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 198,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 271,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 271,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.8453017659999205,
+          "end_s": 0.9557557699999961,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 315,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1986,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 100001,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.9557623149999017,
+          "end_s": 1.06719993899992,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1851,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 46100,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 1.0672086909999052,
+          "end_s": 1.1738869759999488,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 26279,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 104544,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 1.1738943799998651,
+          "end_s": 1.278713438000068,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 315,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3491,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 100902,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.2787214669999685,
+          "end_s": 1.3884259649998967,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1726,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 448,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 102988,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 1.3884327670000403,
+          "end_s": 1.4934036289998858,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 10981,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 110569,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 1.4934110599999713,
+          "end_s": 1.6040857179998511,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 6291,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 102064,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 1.6040929860000688,
+          "end_s": 1.7208803639998678,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 611,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 13,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 57191,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 1.720887459999858,
+          "end_s": 1.8357449999998607,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 4362,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1084,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 105149,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 1.835751615999925,
+          "end_s": 1.945666932999984,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 13,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 4977,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 104799,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 1.9456733889999214,
+          "end_s": 2.060525145999918,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 576,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 611,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1075,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 46100,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.0605312039999717,
+          "end_s": 2.173888300000044,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 10981,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 115076,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 2.173895469999934,
+          "end_s": 2.2882187519999206,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 6291,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3837,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 2.2882249849999425,
+          "end_s": 2.402081972999895,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 611,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 77288,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 2.402088651999975,
+          "end_s": 2.517662595000047,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 311,
+              "finished": true
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": true
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 4460,
+              "finished": true
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 104544,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 256,
+        "decode_tokens": 60,
+        "runner_seconds": 2.516487437000251,
+        "runner_prefill_seconds": 0.8451724840001589,
+        "runner_decode_seconds": 1.671314953000092
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "batch4_64_full",
+      "repetition": 0
+    },
+    {
+      "elapsed_s": 2.547241470000017,
+      "output_tps": 25.125219086512267,
+      "ttft_s": 0.8554268322500889,
+      "requests": {
+        "0": {
+          "ttft_s": 0.8554302400000324,
+          "latency_s": 2.5472175079999033,
+          "mean_itl_s": 0.11278581786665806,
+          "max_itl_s": 0.12082186399993589,
+          "tokens": [
+            23391,
+            315,
+            279,
+            26279,
+            315,
+            279,
+            10981,
+            6291,
+            374,
+            4362,
+            13,
+            576,
+            10981,
+            6291,
+            374,
+            311
+          ]
+        },
+        "1": {
+          "ttft_s": 0.8554272440001114,
+          "latency_s": 2.5472145119999823,
+          "mean_itl_s": 0.11278581786665806,
+          "max_itl_s": 0.12082186399993589,
+          "tokens": [
+            198,
+            522,
+            1851,
+            397,
+            522,
+            1726,
+            397,
+            522,
+            611,
+            397,
+            522,
+            611,
+            397,
+            522,
+            611,
+            397
+          ]
+        },
+        "2": {
+          "ttft_s": 0.855425587000127,
+          "latency_s": 2.547212854999998,
+          "mean_itl_s": 0.11278581786665806,
+          "max_itl_s": 0.12082186399993589,
+          "tokens": [
+            271,
+            1986,
+            374,
+            264,
+            3491,
+            448,
+            279,
+            2038,
+            13,
+            1084,
+            4977,
+            1075,
+            279,
+            2038,
+            374,
+            4460
+          ]
+        },
+        "3": {
+          "ttft_s": 0.8554242580000846,
+          "latency_s": 2.5472115259999555,
+          "mean_itl_s": 0.11278581786665806,
+          "max_itl_s": 0.12082186399993589,
+          "tokens": [
+            271,
+            100001,
+            46100,
+            104544,
+            100902,
+            102988,
+            110569,
+            102064,
+            57191,
+            105149,
+            104799,
+            46100,
+            115076,
+            3837,
+            77288,
+            104544
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 2.241800007141137e-05,
+          "end_s": 0.8554456100000607,
+          "events": [
+            {
+              "name": "0",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 23391,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 198,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 271,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 271,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.855452810000088,
+          "end_s": 0.967871477000017,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 315,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1986,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 100001,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.967897738999909,
+          "end_s": 1.0829641840000477,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1851,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 46100,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 1.0829706720001013,
+          "end_s": 1.2037860479999836,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 26279,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 104544,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 1.2037930270000743,
+          "end_s": 1.320590368000012,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 315,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3491,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 100902,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.3205973399999493,
+          "end_s": 1.425029006999921,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1726,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 448,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 102988,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 1.425035944000001,
+          "end_s": 1.5321132859999125,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 10981,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 110569,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 1.5321195090000401,
+          "end_s": 1.6456597010001133,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 6291,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 102064,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 1.645666232999929,
+          "end_s": 1.751534551000077,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 611,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 13,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 57191,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 1.7515409980001095,
+          "end_s": 1.861249282000017,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 4362,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1084,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 105149,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 1.8612552429999596,
+          "end_s": 1.9752954769999178,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 13,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 4977,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 104799,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 1.975301583999908,
+          "end_s": 2.086908931999915,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 576,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 611,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1075,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 46100,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.0869158000000425,
+          "end_s": 2.203259330000037,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 10981,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 115076,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 2.2032654760000696,
+          "end_s": 2.316590955000038,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 6291,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3837,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 2.3165971519999857,
+          "end_s": 2.4332199759999185,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 611,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 77288,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 2.4332260210001095,
+          "end_s": 2.5472328779999316,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 311,
+              "finished": true
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": true
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 4460,
+              "finished": true
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 104544,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 256,
+        "decode_tokens": 60,
+        "runner_seconds": 2.546229797000251,
+        "runner_prefill_seconds": 0.8553571570000713,
+        "runner_decode_seconds": 1.6908726400001797
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "batch4_64_full",
+      "repetition": 1
+    },
+    {
+      "elapsed_s": 2.4942585769999823,
+      "output_tps": 25.658927502607703,
+      "ttft_s": 0.8139204102500912,
+      "requests": {
+        "0": {
+          "ttft_s": 0.8139234990001114,
+          "latency_s": 2.494240407999996,
+          "mean_itl_s": 0.11202112726665897,
+          "max_itl_s": 0.11875635399997009,
+          "tokens": [
+            23391,
+            315,
+            279,
+            26279,
+            315,
+            279,
+            10981,
+            6291,
+            374,
+            4362,
+            13,
+            576,
+            10981,
+            6291,
+            374,
+            311
+          ]
+        },
+        "1": {
+          "ttft_s": 0.813920908,
+          "latency_s": 2.4942378169998847,
+          "mean_itl_s": 0.11202112726665897,
+          "max_itl_s": 0.11875635399997009,
+          "tokens": [
+            198,
+            522,
+            1851,
+            397,
+            522,
+            1726,
+            397,
+            522,
+            611,
+            397,
+            522,
+            611,
+            397,
+            522,
+            611,
+            397
+          ]
+        },
+        "2": {
+          "ttft_s": 0.8139192910000475,
+          "latency_s": 2.494236199999932,
+          "mean_itl_s": 0.11202112726665897,
+          "max_itl_s": 0.11875635399997009,
+          "tokens": [
+            271,
+            1986,
+            374,
+            264,
+            3491,
+            448,
+            279,
+            2038,
+            13,
+            1084,
+            4977,
+            1075,
+            279,
+            2038,
+            374,
+            4460
+          ]
+        },
+        "3": {
+          "ttft_s": 0.8139179430002059,
+          "latency_s": 2.4942348520000905,
+          "mean_itl_s": 0.11202112726665897,
+          "max_itl_s": 0.11875635399997009,
+          "tokens": [
+            271,
+            100001,
+            46100,
+            104544,
+            100902,
+            102988,
+            110569,
+            102064,
+            57191,
+            105149,
+            104799,
+            46100,
+            115076,
+            3837,
+            77288,
+            104544
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.576499994371261e-05,
+          "end_s": 0.8139328710001337,
+          "events": [
+            {
+              "name": "0",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 23391,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 198,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 271,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": true,
+              "scheduled": 64,
+              "token": 271,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.8139391990000604,
+          "end_s": 0.919316912000113,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 315,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1986,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 100001,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.9193236349999552,
+          "end_s": 1.0274020040001233,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1851,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 46100,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 1.0274089740000818,
+          "end_s": 1.1412456840000686,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 26279,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 104544,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 1.1412517569999636,
+          "end_s": 1.251479978000134,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 315,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3491,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 100902,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.251486967000119,
+          "end_s": 1.3590799129999596,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1726,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 448,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 102988,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 1.3590860670001348,
+          "end_s": 1.472472277999941,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 10981,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 110569,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 1.4724780220001321,
+          "end_s": 1.5858123979999164,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 6291,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 102064,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 1.5858182429999488,
+          "end_s": 1.6987038790000497,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 611,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 13,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 57191,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 1.6987103330000082,
+          "end_s": 1.8118244610000147,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 4362,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1084,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 105149,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 1.8118307859999732,
+          "end_s": 1.9228184569999485,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 13,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 4977,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 104799,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 1.9228243039999597,
+          "end_s": 2.0335860330001196,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 576,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 611,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1075,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 46100,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.0335918680000304,
+          "end_s": 2.1449264620000577,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 10981,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 115076,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 2.144932911000069,
+          "end_s": 2.2636828160000277,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 6291,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 522,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3837,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 2.2636893700000655,
+          "end_s": 2.38107168800002,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 611,
+              "finished": false
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 77288,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 2.3810775379999995,
+          "end_s": 2.4942497800000183,
+          "events": [
+            {
+              "name": "0",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 311,
+              "finished": true
+            },
+            {
+              "name": "1",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 397,
+              "finished": true
+            },
+            {
+              "name": "2",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 4460,
+              "finished": true
+            },
+            {
+              "name": "3",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 104544,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 256,
+        "decode_tokens": 60,
+        "runner_seconds": 2.4932991360001324,
+        "runner_prefill_seconds": 0.8138583249999556,
+        "runner_decode_seconds": 1.6794408110001768
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "batch4_64_full",
+      "repetition": 2
+    },
+    {
+      "elapsed_s": 3.570251067000072,
+      "output_tps": 6.722216323057125,
+      "ttft_s": 1.1544136250000747,
+      "requests": {
+        "A": {
+          "ttft_s": 0.15800611000008757,
+          "latency_s": 3.570231966000165,
+          "mean_itl_s": 0.2274817237333385,
+          "max_itl_s": 2.2734058710000227,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.150821140000062,
+          "latency_s": 2.999393763999933,
+          "mean_itl_s": 0.12122466057141017,
+          "max_itl_s": 0.12256052599991563,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.3772000102107995e-05,
+          "end_s": 0.15801859700013665,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.15802491200020086,
+          "end_s": 0.20866044500007774,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.20868531000019175,
+          "end_s": 0.6322386070000903,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6322445240000434,
+          "end_s": 1.1393641360000402,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 1.1393689260000883,
+          "end_s": 1.6954175880000548,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.6954230990002088,
+          "end_s": 2.274025900000197,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 2.2740311649999967,
+          "end_s": 2.359505790000185,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 2.3595127810001486,
+          "end_s": 2.4820663160001004,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 2.482073790000186,
+          "end_s": 2.6046063340002092,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.604613468000025,
+          "end_s": 2.724718757000119,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.7247368130001632,
+          "end_s": 2.845378225000104,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.845385343000089,
+          "end_s": 2.9654651800001375,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.9654720000000907,
+          "end_s": 3.0864277709999897,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 3.086434722000149,
+          "end_s": 3.208078414000056,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 3.20808632100011,
+          "end_s": 3.261182598000005,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 3.2611892730001273,
+          "end_s": 3.310215515000209,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.310222572000157,
+          "end_s": 3.364447786000028,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.364453913000034,
+          "end_s": 3.4150374270000157,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.4150435710000693,
+          "end_s": 3.4680251980000776,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.468032122000068,
+          "end_s": 3.5197288620001927,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.5197347190000983,
+          "end_s": 3.570244453000214,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.5691670359999534,
+        "runner_prefill_seconds": 2.3085026040000685,
+        "runner_decode_seconds": 1.260664431999885
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_original",
+      "repetition": 0
+    },
+    {
+      "elapsed_s": 4.0459779660000095,
+      "output_tps": 5.93181678241496,
+      "ttft_s": 1.3807283659999712,
+      "requests": {
+        "A": {
+          "ttft_s": 0.15919335700004922,
+          "latency_s": 4.045955344000049,
+          "mean_itl_s": 0.2591174658,
+          "max_itl_s": 0.8327524910000648,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.602263374999893,
+          "latency_s": 3.63719912800002,
+          "mean_itl_s": 0.14784796471430386,
+          "max_itl_s": 0.16426349500011383,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.6660000028423383e-05,
+          "end_s": 0.15920760200015138,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.15921424000021034,
+          "end_s": 0.21146189800015236,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.2114892450001662,
+          "end_s": 0.6372216020001815,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6372265750001134,
+          "end_s": 0.6877184480001688,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 0.6877239600000848,
+          "end_s": 1.150292287000184,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.1502975840001,
+          "end_s": 1.1992871070001456,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 1.199293328000067,
+          "end_s": 1.7538705819999905,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 1.7538777650001975,
+          "end_s": 1.8644043940000756,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 1.8644102800001292,
+          "end_s": 2.6073194970001623,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.60732578000011,
+          "end_s": 2.6971568850001404,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.6971629360000406,
+          "end_s": 2.8137517860000116,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.813757531000192,
+          "end_s": 2.9780152810001255,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.978027708000127,
+          "end_s": 3.1375097449999885,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 3.137518072000148,
+          "end_s": 3.276511520000213,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 3.276518218000092,
+          "end_s": 3.414960568000197,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 3.414966682000113,
+          "end_s": 3.5541753620000236,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.554214871000113,
+          "end_s": 3.7016778950001026,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.7016867820000243,
+          "end_s": 3.8486875390001387,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.848697972000082,
+          "end_s": 3.9132093720002104,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.913215519000005,
+          "end_s": 3.9818830430001526,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.9818917590000638,
+          "end_s": 4.045969589000151,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 4.044464210999649,
+        "runner_prefill_seconds": 2.4611590340000475,
+        "runner_decode_seconds": 1.5833051769996018
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_alternating",
+      "repetition": 0
+    },
+    {
+      "elapsed_s": 3.7147787189999235,
+      "output_tps": 6.460680922189943,
+      "ttft_s": 1.3199385854999264,
+      "requests": {
+        "A": {
+          "ttft_s": 0.1858845360000032,
+          "latency_s": 3.714754073999984,
+          "mean_itl_s": 0.23525796919999872,
+          "max_itl_s": 0.6479965799999263,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.4539926349998495,
+          "latency_s": 3.303009593999832,
+          "mean_itl_s": 0.12128813699999748,
+          "max_itl_s": 0.1262728970000353,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.9442999928287463e-05,
+          "end_s": 0.18590169999993122,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.18590877399992678,
+          "end_s": 0.2576381589999528,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.2576593579999553,
+          "end_s": 0.7507998799999314,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.7508051289999003,
+          "end_s": 0.8227789779998602,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 0.8227877809999882,
+          "end_s": 1.3177710889999616,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.317777408999973,
+          "end_s": 1.381932296000059,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 1.381938997999896,
+          "end_s": 1.9352754639999148,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 1.9352818099998785,
+          "end_s": 1.9825551339999947,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 1.9825615019999532,
+          "end_s": 2.579771101999995,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.579776733000017,
+          "end_s": 2.630551713999921,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.630557996999869,
+          "end_s": 2.7116514279998682,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.711657356999922,
+          "end_s": 2.8336683160000575,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.8336755430000267,
+          "end_s": 2.95500413700006,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 2.955011473000013,
+          "end_s": 3.072563272000025,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 3.072570872999904,
+          "end_s": 3.19883616900006,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 3.198843320999913,
+          "end_s": 3.3166750850000426,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.3166817910000645,
+          "end_s": 3.439070132999859,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.439078451999876,
+          "end_s": 3.5606683869998506,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.5606777789998887,
+          "end_s": 3.6124621659998866,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.612468257000046,
+          "end_s": 3.6654607049999868,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.6654663039998923,
+          "end_s": 3.714771237999912,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.7134060499995485,
+        "runner_prefill_seconds": 2.405155117999584,
+        "runner_decode_seconds": 1.3082509319999645
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_alternating",
+      "repetition": 1
+    },
+    {
+      "elapsed_s": 3.5743658710000545,
+      "output_tps": 6.7144777188925975,
+      "ttft_s": 1.1198779515000297,
+      "requests": {
+        "A": {
+          "ttft_s": 0.16038971100010713,
+          "latency_s": 3.574317671000017,
+          "mean_itl_s": 0.22759519733332734,
+          "max_itl_s": 2.2063165340000523,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.079366191999952,
+          "latency_s": 2.9873049430000265,
+          "mean_itl_s": 0.12970553585715347,
+          "max_itl_s": 0.1411378269999659,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 3.871400008392811e-05,
+          "end_s": 0.1604266760000428,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.1604326219999166,
+          "end_s": 0.2112996779999321,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.21132462600007784,
+          "end_s": 0.6541817199999969,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6541880940001192,
+          "end_s": 1.1037519970000176,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 1.1037573749999865,
+          "end_s": 1.62854569000001,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.62855133700009,
+          "end_s": 2.209730045000015,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 2.209734864999973,
+          "end_s": 2.290690326999993,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 2.2906957019999936,
+          "end_s": 2.4176162119999844,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 2.417623826999943,
+          "end_s": 2.547293747999902,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.5473009709999133,
+          "end_s": 2.6792948790000537,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.679301303000102,
+          "end_s": 2.803374513000108,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.8033809159999237,
+          "end_s": 2.944512340000074,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.944520377000117,
+          "end_s": 3.074310270000069,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 3.074316625999927,
+          "end_s": 3.1986290780000672,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 3.1986381090000577,
+          "end_s": 3.2562406839999767,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 3.2562474530000145,
+          "end_s": 3.3209820590000163,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.3209878679999747,
+          "end_s": 3.3674888360001205,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.36749418699992,
+          "end_s": 3.4205815749999147,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.420587967000074,
+          "end_s": 3.471516733000044,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.4715231059999496,
+          "end_s": 3.5221367700000883,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.522142152000015,
+          "end_s": 3.5743546359999527,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.5731968070006133,
+        "runner_prefill_seconds": 2.239374756000416,
+        "runner_decode_seconds": 1.3338220510001975
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_original",
+      "repetition": 1
+    },
+    {
+      "elapsed_s": 3.5799016749999737,
+      "output_tps": 6.704094743049103,
+      "ttft_s": 1.153898786500008,
+      "requests": {
+        "A": {
+          "ttft_s": 0.1593672340000012,
+          "latency_s": 3.5798782939998546,
+          "mean_itl_s": 0.2280340706666569,
+          "max_itl_s": 2.2722557530000813,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.148430339000015,
+          "latency_s": 3.019861921000029,
+          "mean_itl_s": 0.12449022600000197,
+          "max_itl_s": 0.12859279200006313,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.6842999912114465e-05,
+          "end_s": 0.15938230400001885,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.15938788199991905,
+          "end_s": 0.2095397559999128,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.20956911899997976,
+          "end_s": 0.680567665999888,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6805727700000261,
+          "end_s": 1.1577818309999657,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 1.1577867379999134,
+          "end_s": 1.7056403770000088,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.7056452449999142,
+          "end_s": 2.2789636659999815,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 2.2789688999998816,
+          "end_s": 2.3579987759999312,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 2.3580053129999214,
+          "end_s": 2.481795508999994,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 2.4818018680000478,
+          "end_s": 2.6103883010000573,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.6103952519999893,
+          "end_s": 2.7359691500000736,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.7359752959998787,
+          "end_s": 2.859865692000085,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.8598722389999693,
+          "end_s": 2.982219473999976,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.98222621900004,
+          "end_s": 3.104645312999992,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 3.1046525669999028,
+          "end_s": 3.229430357999945,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 3.22943895100002,
+          "end_s": 3.2826561919998767,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 3.282662371000015,
+          "end_s": 3.329858910999974,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.3298655690000487,
+          "end_s": 3.379952628999945,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.3799592840000514,
+          "end_s": 3.429667031000008,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.429672256999993,
+          "end_s": 3.4788862339999014,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.4788914870000553,
+          "end_s": 3.5290935979999176,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.529099073999987,
+          "end_s": 3.5798933639998722,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.5788537900000392,
+        "runner_prefill_seconds": 2.3074859779999315,
+        "runner_decode_seconds": 1.2713678120001077
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_original",
+      "repetition": 2
+    },
+    {
+      "elapsed_s": 3.5365692559998934,
+      "output_tps": 6.786237809222397,
+      "ttft_s": 1.2329039139999622,
+      "requests": {
+        "A": {
+          "ttft_s": 0.1572248119998676,
+          "latency_s": 3.5365452239998376,
+          "mean_itl_s": 0.22528802746666468,
+          "max_itl_s": 0.6024379069999668,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.308583016000057,
+          "latency_s": 3.1722423510000226,
+          "mean_itl_s": 0.1233799049999951,
+          "max_itl_s": 0.12668334699992556,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.6772999970271485e-05,
+          "end_s": 0.15723975699984294,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.157246270999849,
+          "end_s": 0.21048912899982497,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.21050754199995936,
+          "end_s": 0.6423882750000303,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6423949269999412,
+          "end_s": 0.6909862329998759,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 0.6909930780000195,
+          "end_s": 1.1639140329998554,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.1639188639999247,
+          "end_s": 1.213107270999899,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 1.213113225999905,
+          "end_s": 1.7531143720000273,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 1.7531200789999275,
+          "end_s": 1.8004830269999275,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 1.8004891569999018,
+          "end_s": 2.351804547000029,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.3518095619999713,
+          "end_s": 2.4029209339998943,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.402927686999874,
+          "end_s": 2.5190899839999474,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.5190968009999324,
+          "end_s": 2.639768394999919,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.639776073999883,
+          "end_s": 2.7598189450000064,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 2.759825304999822,
+          "end_s": 2.886502291999932,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 2.8865094679999856,
+          "end_s": 3.0130582099998264,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 3.0130657359998168,
+          "end_s": 3.135497260999955,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.1355052879998766,
+          "end_s": 3.2600188819999403,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.2600265799999306,
+          "end_s": 3.382749318999913,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.3827597519998562,
+          "end_s": 3.4349304589998155,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.4349365179998586,
+          "end_s": 3.485271166999837,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.4852775249999013,
+          "end_s": 3.536560168999813,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.535373066000375,
+        "runner_prefill_seconds": 2.2691500689998065,
+        "runner_decode_seconds": 1.2662229970005683
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_alternating",
+      "repetition": 2
+    },
+    {
+      "elapsed_s": 3.4644932410001275,
+      "output_tps": 6.927420067089436,
+      "ttft_s": 1.2027618250000387,
+      "requests": {
+        "A": {
+          "ttft_s": 0.1684969259999889,
+          "latency_s": 3.464474020000125,
+          "mean_itl_s": 0.21973180626667574,
+          "max_itl_s": 0.64374272200007,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.2370267240000885,
+          "latency_s": 3.0967475590000504,
+          "mean_itl_s": 0.1228172621428517,
+          "max_itl_s": 0.12654789399994115,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.4119000070422771e-05,
+          "end_s": 0.16850890299997445,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.1685148440001285,
+          "end_s": 0.21578662100000656,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.21580989100016268,
+          "end_s": 0.639749798000139,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6397550530000444,
+          "end_s": 0.6909914730001674,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 0.6909975720000148,
+          "end_s": 1.1295594450000408,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.1295653890001631,
+          "end_s": 1.1814954799999668,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 1.1815021560000787,
+          "end_s": 1.6759406959999978,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 1.6759464280000884,
+          "end_s": 1.7258664299999964,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 1.7258731160000025,
+          "end_s": 2.3134939230001237,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.313499180000008,
+          "end_s": 2.3696091520000664,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.3696159620001254,
+          "end_s": 2.4528359780001665,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.452844177000088,
+          "end_s": 2.577864078000175,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.57787111000016,
+          "end_s": 2.7016309240000282,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 2.701638260999971,
+          "end_s": 2.821672957000146,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 2.821680547000142,
+          "end_s": 2.9405300150001494,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 2.9405374069999652,
+          "end_s": 3.0612816070001827,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.0612894519999827,
+          "end_s": 3.187829501000124,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.187839249000035,
+          "end_s": 3.3125568130001284,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.3125654330001453,
+          "end_s": 3.363626014000147,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.363633273000005,
+          "end_s": 3.413789697000084,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.4137954000000263,
+          "end_s": 3.4644859970001107,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.4632906690003438,
+        "runner_prefill_seconds": 2.1959179910004423,
+        "runner_decode_seconds": 1.2673726779999015
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_alternating",
+      "repetition": 3
+    },
+    {
+      "elapsed_s": 3.484035099999801,
+      "output_tps": 6.888564354590277,
+      "ttft_s": 1.0857660574999954,
+      "requests": {
+        "A": {
+          "ttft_s": 0.15416358399988894,
+          "latency_s": 3.4840158389999942,
+          "mean_itl_s": 0.22199015033334035,
+          "max_itl_s": 2.1441093069997805,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.017368531000102,
+          "latency_s": 2.912051148000046,
+          "mean_itl_s": 0.12781180242856344,
+          "max_itl_s": 0.13132021100000202,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.4081000017540646e-05,
+          "end_s": 0.15417547299989565,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.1541809299999386,
+          "end_s": 0.20257566700001917,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.20259503499983111,
+          "end_s": 0.6092840249998517,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6092890879999686,
+          "end_s": 1.067888215999801,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 1.0678933489998599,
+          "end_s": 1.569718987999977,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.5697248679998665,
+          "end_s": 2.1344312269998227,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 2.134440677999919,
+          "end_s": 2.219962920999933,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 2.2199693279999337,
+          "end_s": 2.3466849739997997,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 2.346691557999975,
+          "end_s": 2.4780051849998017,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.478011587999845,
+          "end_s": 2.607725739999978,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.60773177499982,
+          "end_s": 2.7336724140000115,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.733678198000007,
+          "end_s": 2.8621926009998333,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.862200070999961,
+          "end_s": 2.9875730100000055,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 2.9875795809998635,
+          "end_s": 3.114645537999877,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 3.1146540759998516,
+          "end_s": 3.1678840129998207,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 3.167889664999848,
+          "end_s": 3.2186403339999288,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.218646155999977,
+          "end_s": 3.2707845069999166,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.2707907519998116,
+          "end_s": 3.324984994999795,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.3249907800000074,
+          "end_s": 3.3738998839999113,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.3739057349998802,
+          "end_s": 3.4280538149998847,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.428061066999817,
+          "end_s": 3.484027728000001,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.482812955000554,
+        "runner_prefill_seconds": 2.1710673189998033,
+        "runner_decode_seconds": 1.311745636000751
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_original",
+      "repetition": 3
+    },
+    {
+      "elapsed_s": 3.5582147209997856,
+      "output_tps": 6.744955513324528,
+      "ttft_s": 1.1260028284999635,
+      "requests": {
+        "A": {
+          "ttft_s": 0.16215651699985756,
+          "latency_s": 3.558196801999884,
+          "mean_itl_s": 0.22640268566666844,
+          "max_itl_s": 2.219680679000021,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.0898491400000694,
+          "latency_s": 2.9822525859999587,
+          "mean_itl_s": 0.12748620657141277,
+          "max_itl_s": 0.1365063050000117,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.1940999911530525e-05,
+          "end_s": 0.1621667089998482,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.16217240999981186,
+          "end_s": 0.21156307199998992,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.21159400399983497,
+          "end_s": 0.6276525709999987,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6276591839998673,
+          "end_s": 1.0946462989998054,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 1.0946510139999646,
+          "end_s": 1.6405748279998988,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.6405801879998307,
+          "end_s": 2.210696556999892,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 2.2107019339998715,
+          "end_s": 2.301442454999915,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 2.3014495059999263,
+          "end_s": 2.431243751000011,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 2.4312504499998795,
+          "end_s": 2.5506513739999264,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.5506581439999536,
+          "end_s": 2.669750926000006,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.6697664469998017,
+          "end_s": 2.7996994719999293,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.7997061080000094,
+          "end_s": 2.936205776999941,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.936213048999889,
+          "end_s": 3.061297403999788,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 3.0613037910000003,
+          "end_s": 3.193845900999804,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 3.193854685999895,
+          "end_s": 3.243012077000003,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 3.2430181539998557,
+          "end_s": 3.298603589999857,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.2986095999999634,
+          "end_s": 3.3556480679999368,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.3556542879998688,
+          "end_s": 3.4058445910000046,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.4058511869998256,
+          "end_s": 3.4540769419998014,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.4540824809998867,
+          "end_s": 3.503913058999842,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.5039189350000015,
+          "end_s": 3.5582069939998746,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.5569173129999854,
+        "runner_prefill_seconds": 2.251658789000203,
+        "runner_decode_seconds": 1.3052585239997825
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_original",
+      "repetition": 4
+    },
+    {
+      "elapsed_s": 3.453370871000061,
+      "output_tps": 6.949731406360605,
+      "ttft_s": 1.1943673539999509,
+      "requests": {
+        "A": {
+          "ttft_s": 0.15894931499997256,
+          "latency_s": 3.4533473210001375,
+          "mean_itl_s": 0.21962653373334434,
+          "max_itl_s": 0.6157473929999924,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.229785392999929,
+          "latency_s": 3.082650729000079,
+          "mean_itl_s": 0.12183790514287855,
+          "max_itl_s": 0.1279027360001237,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.705099998616788e-05,
+          "end_s": 0.15896424199991088,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.15897022700005436,
+          "end_s": 0.20969590899994728,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.2097173939998811,
+          "end_s": 0.626558563999879,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6265641160000541,
+          "end_s": 0.6763439030000882,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 0.6763495479999619,
+          "end_s": 1.1105894079998961,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.1105947880000713,
+          "end_s": 1.1588238320000528,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 1.1588293820000217,
+          "end_s": 1.6942088389998844,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 1.694216046000065,
+          "end_s": 1.7417182770000181,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 1.7417246790000718,
+          "end_s": 2.298892474000013,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.298897487999966,
+          "end_s": 2.3574656700000105,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.3574711020000905,
+          "end_s": 2.439502065999932,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.4395083459999114,
+          "end_s": 2.563842184999885,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.5638492549999228,
+          "end_s": 2.682508435000045,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 2.682515100000046,
+          "end_s": 2.803066596000008,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 2.803075485999898,
+          "end_s": 2.921415765999882,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 2.9214232249998986,
+          "end_s": 3.041394337999918,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.0414010960000724,
+          "end_s": 3.164464665999958,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.164471666000054,
+          "end_s": 3.2923674020000817,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.292375308999908,
+          "end_s": 3.3460955359998934,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.3461018369998783,
+          "end_s": 3.399307929000088,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.3993138609998823,
+          "end_s": 3.453362248000076,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.4521909980001055,
+        "runner_prefill_seconds": 2.184250769999835,
+        "runner_decode_seconds": 1.2679402280002705
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_alternating",
+      "repetition": 4
+    },
+    {
+      "elapsed_s": 3.4813901380000516,
+      "output_tps": 6.893797893558474,
+      "ttft_s": 1.2035328700000036,
+      "requests": {
+        "A": {
+          "ttft_s": 0.16124320299991268,
+          "latency_s": 3.481370249999827,
+          "mean_itl_s": 0.22134180313332763,
+          "max_itl_s": 0.6066314770000645,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.2458225370000946,
+          "latency_s": 3.114403078000123,
+          "mean_itl_s": 0.1240829344285755,
+          "max_itl_s": 0.129721815000039,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.4946999954190687e-05,
+          "end_s": 0.16125609999994595,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.16126146900001004,
+          "end_s": 0.21209311899997374,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.21211493099986,
+          "end_s": 0.6379746069999328,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6379952969998612,
+          "end_s": 0.6867353119998825,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 0.686741930999915,
+          "end_s": 1.1524800360000427,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.1524858979998953,
+          "end_s": 1.2041516760000377,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 1.204157572999975,
+          "end_s": 1.7146083289999297,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 1.7146142829999462,
+          "end_s": 1.763570159999972,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 1.7635765959998935,
+          "end_s": 2.3200860360000206,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.3200920029998997,
+          "end_s": 2.3702016370000365,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.370208181999942,
+          "end_s": 2.4579368429999704,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.4579438069999924,
+          "end_s": 2.5835605289998966,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.5835678270000244,
+          "end_s": 2.70470318699995,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 2.704709732999845,
+          "end_s": 2.826514115000009,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 2.8265208610000627,
+          "end_s": 2.956235930000048,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 2.9562422750000223,
+          "end_s": 3.0809464399999342,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.080953364999914,
+          "end_s": 3.2049752479999825,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.204983611999978,
+          "end_s": 3.326517383999999,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.326525750999963,
+          "end_s": 3.378365021000036,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.3783713079999416,
+          "end_s": 3.428145486999938,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.428152285999886,
+          "end_s": 3.4813831469998604,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.4801148240003386,
+        "runner_prefill_seconds": 2.2071502000001146,
+        "runner_decode_seconds": 1.272964624000224
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_alternating",
+      "repetition": 5
+    },
+    {
+      "elapsed_s": 3.500650733999919,
+      "output_tps": 6.855868186706271,
+      "ttft_s": 1.1133513725000057,
+      "requests": {
+        "A": {
+          "ttft_s": 0.1578640479999649,
+          "latency_s": 3.5006317119998585,
+          "mean_itl_s": 0.2228511775999929,
+          "max_itl_s": 2.1898963549999735,
+          "tokens": [
+            311,
+            1431,
+            11,
+            279,
+            2038,
+            702,
+            1012,
+            5326,
+            304,
+            264,
+            1616,
+            429,
+            432,
+            374,
+            537,
+            3204
+          ]
+        },
+        "B": {
+          "ttft_s": 2.0688386970000465,
+          "latency_s": 2.941488756000126,
+          "mean_itl_s": 0.12466429414286852,
+          "max_itl_s": 0.13461979499993504,
+          "tokens": [
+            82,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198,
+            198
+          ]
+        }
+      },
+      "traces": [
+        {
+          "step": 0,
+          "start_s": 1.3007999996261788e-05,
+          "end_s": 0.15787537100004556,
+          "events": [
+            {
+              "name": "A",
+              "prefill": true,
+              "scheduled": 32,
+              "token": 311,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 1,
+          "start_s": 0.1578810710000198,
+          "end_s": 0.20879211900000882,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1431,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "start_s": 0.20881181300001117,
+          "end_s": 0.6665372330000991,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "start_s": 0.6665424800000892,
+          "end_s": 1.1061255889999302,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "start_s": 1.106131342000026,
+          "end_s": 1.6212557759999981,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "start_s": 1.6212624750000941,
+          "end_s": 2.1901924000001145,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 128,
+              "token": null,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "start_s": 2.1901971469999353,
+          "end_s": 2.2776498949999677,
+          "events": [
+            {
+              "name": "B",
+              "prefill": true,
+              "scheduled": 1,
+              "token": 82,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 7,
+          "start_s": 2.277656047999926,
+          "end_s": 2.3986884739999823,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 11,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 8,
+          "start_s": 2.398694618000036,
+          "end_s": 2.5181665000000066,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 279,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 9,
+          "start_s": 2.518172797000034,
+          "end_s": 2.639133177000076,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 2038,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 10,
+          "start_s": 2.6391411609999977,
+          "end_s": 2.7642551139999796,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 702,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 11,
+          "start_s": 2.764261628999975,
+          "end_s": 2.8988749089999146,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1012,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 12,
+          "start_s": 2.898883395999974,
+          "end_s": 3.022121648999928,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 5326,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 13,
+          "start_s": 3.022130466000135,
+          "end_s": 3.1502999540000474,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 304,
+              "finished": false
+            },
+            {
+              "name": "B",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 198,
+              "finished": true
+            }
+          ]
+        },
+        {
+          "step": 14,
+          "start_s": 3.1503092469999956,
+          "end_s": 3.2009969000000638,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 264,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 15,
+          "start_s": 3.201002745000096,
+          "end_s": 3.2514374919999227,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 1616,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 16,
+          "start_s": 3.2514431590000186,
+          "end_s": 3.3019445810000434,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 429,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 17,
+          "start_s": 3.301950454000007,
+          "end_s": 3.352445591000105,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 432,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 18,
+          "start_s": 3.3524513340000794,
+          "end_s": 3.3997099949999665,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 374,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 19,
+          "start_s": 3.3997158770000624,
+          "end_s": 3.449690015999977,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 537,
+              "finished": false
+            }
+          ]
+        },
+        {
+          "step": 20,
+          "start_s": 3.4496967509999195,
+          "end_s": 3.500643034999939,
+          "events": [
+            {
+              "name": "A",
+              "prefill": false,
+              "scheduled": 1,
+              "token": 3204,
+              "finished": true
+            }
+          ]
+        }
+      ],
+      "measure": {
+        "prefill_tokens": 545,
+        "decode_tokens": 22,
+        "runner_seconds": 3.4995869140004743,
+        "runner_prefill_seconds": 2.2263734600001044,
+        "runner_decode_seconds": 1.27321345400037
+      },
+      "peak_rss_mib": 4434.93359375,
+      "case": "paired_dynamic_original",
+      "repetition": 5
+    }
+  ]
+}
